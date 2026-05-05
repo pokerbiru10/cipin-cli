@@ -1,0 +1,46 @@
+{
+  "name": "cipin-cli-agent",
+  "version": "0.1.0",
+  "description": "Cipin CLI - terminal-first AI agent for chat/plan/agent workflows.",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/REPLACE_ME/REPLACE_ME.git",
+    "directory": "cli"
+  },
+  "homepage": "https://github.com/REPLACE_ME/REPLACE_ME#readme",
+  "bugs": {
+    "url": "https://github.com/REPLACE_ME/REPLACE_ME/issues"
+  },
+  "keywords": [
+    "cli",
+    "agent",
+    "openai",
+    "terminal",
+    "typescript"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "cipin": "bin/cipin.js"
+  },
+  "files": [
+    "bin",
+    "dist/src",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepack": "npm run build",
+    "test": "npm run build && node --test dist/test"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "typescript": "^5.6.3"
+  }
+}
